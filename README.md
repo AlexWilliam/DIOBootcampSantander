@@ -1,5 +1,5 @@
-# DIOBootcampSantander
-Repositório do bootcamp do Santander em parceria com a DIO
+# Bootcamp Fullstack Santander
+Repositório do bootcamp fullstack do Santander em parceria com a DIO
 
 ## Conheça a DIO
 [DIO - Digital Inovation One](https://dio.me)
