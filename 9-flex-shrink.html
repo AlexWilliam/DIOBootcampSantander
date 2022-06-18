@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos - Flex Shrink</title>
+        <link rel="stylesheet" href="assets/css/9-style.css">
+    </head>
+    <body>
+        <p>Shrink 1 + Grow 1</p>
+        <div class="container">
+            <div class="item s-1 fg-1">
+                A
+            </div>
+            <div class="item s-1 fg-1">
+                B
+            </div>
+            <div class="item s-1 fg-1">
+                C
+            </div>
+            <div class="item s-1 fg-1">
+                D
+            </div>
+            <div class="item s-1 fg-1">
+                E
+            </div>
+        </div>
+        
+        <p>Shrink 1 + Grow 1 + Conteudo diferente</p>
+        <div class="container">
+            <div class="item s-1 fg-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </div>
+            <div class="item s-1 fg-1">
+                B
+            </div>
+            <div class="item s-1 fg-1">
+                C
+            </div>
+            <div class="item s-1 fg-1">
+                D
+            </div>
+        </div>
+        
+        <p>Shrink 0 + Basis x + Conteudo diferente</p>
+        <div class="container">
+            <div class="item s-0 fg-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </div>
+            <div class="item s-0 fg-1">
+                B
+            </div>
+            <div class="item s-0 fg-1">
+                C
+            </div>
+            <div class="item s-0 fg-1">
+                D
+            </div>
+        </div>
+
+        
+        <p>Shrink Mix + Basis x + Conteudo diferente</p>
+        <div class="container">
+            <div class="item s-2 fg-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </div>
+            <div class="item s-2 fg-1">
+                B
+            </div>
+            <div class="item s-2 fg-1">
+                C
+            </div>
+            <div class="item s-3 fg-1">
+                D
+            </div>
+        </div>
+    </body>
+</html>
