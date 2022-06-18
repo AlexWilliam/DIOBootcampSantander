@@ -1,0 +1,58 @@
+.container{
+    height: 400px;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;    
+    border: 1px solid black;
+}
+
+.item {
+    background-color: orangered;
+    padding: 5px;
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.center {
+    align-content: center;
+}
+
+.stretch {
+    align-content: stretch;
+}
+
+.flex-start{
+    align-content: flex-start;
+}
+
+.flex-end{
+    align-content: flex-end;
+}
+
+.baseline {
+    align-content: baseline;
+}
+
+.space-between {
+    align-content: space-between;
+}
+
+.space-around {
+    align-content: space-around;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.central {
+    height: 300px;
+    justify-content: center;
+}
+
+.central .item {
+    flex: 0;
+    padding: 20px;
+}
