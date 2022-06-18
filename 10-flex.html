@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos - Flex</title>
+        <link rel="stylesheet" href="assets/css/10-style.css">
+    </head>
+    <body>
+        <p>FLEX 1 = Grow 1 + Shrink 1 + Basis 0</p>
+        <div class="container">
+            <div class="item flex-1">
+                A
+            </div>
+            <div class="item flex-1">
+                B
+            </div>
+            <div class="item flex-1">
+                C
+            </div>
+            <div class="item flex-1">
+                D
+            </div>
+            <div class="item flex-1">
+                E
+            </div>
+        </div>
+        
+        <p>FLEX MIX = Grow 1 + Shrink 1 + Basis 0</p>
+        <div class="container">
+            <div class="item flex-1">
+                A
+            </div>
+            <div class="item flex-2">
+                B
+            </div>
+            <div class="item flex-2">
+                C
+            </div>
+            <div class="item flex-1">
+                D
+            </div>
+            <div class="item flex-1">
+                E
+            </div>
+        </div>
+        
+        <p>width ignorado -> basis 0</p>
+        <div class="container">
+            <div class="item flex-1 largura">
+                A
+            </div>
+            <div class="item flex-1  largura">
+                B
+            </div>
+            <div class="item flex-1 largura">
+                C
+            </div>
+            <div class="item flex-1 largura">
+                D
+            </div>
+            <div class="item flex-1 largura">
+                E
+            </div>
+        </div>
+
+        
+        
+        <p>FLEX MIX AUTO = Grow 1 + Shrink 0 + Basis AUTO</p>
+        <div class="container">
+            <div class="item flex-mix-auto">
+                A
+            </div>
+            <div class="item flex-mix-auto">
+                B
+            </div>
+            <div class="item flex-mix-auto">
+                C
+            </div>
+            <div class="item flex-mix-auto">
+                D
+            </div>
+            <div class="item flex-mix-auto">
+                E
+            </div>
+            <div class="item flex-1 largura">
+                F
+            </div>
+        </div>
+
+        <p>FLEX MIX 100 = Grow 1 + Shrink 0 + Basis 100px</p>
+        <div class="container">
+            <div class="item flex-mix-100">
+                A
+            </div>
+            <div class="item flex-mix-100">
+                B
+            </div>
+            <div class="item flex-mix-100">
+                C
+            </div>
+            <div class="item flex-mix-100">
+                D
+            </div>
+            <div class="item flex-mix-100">
+                E
+            </div>
+        </div>
+    </body>
+</html>
