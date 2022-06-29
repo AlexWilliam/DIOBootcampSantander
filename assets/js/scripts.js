@@ -1,27 +1,29 @@
-const TASKBUTTON = document.getElementById('add-task');
-let taskList = document.getElementById('tasks');
+const form = document.getElementById('task-form');
+const taskList = document.getElementById('tasks');
 
-TASKBUTTON.addEventListener('click', function(){
+form.onsubmit = function (e) {
+	e.preventDefault();
+	const inputField = document.getElementById('task-input');
+	addTask(inputField.value);
+	form.reset();
+};
 
-    taskListAtual = taskList.innerHTML;
+function addTask(description) {
+	const taskContainer = document.createElement('div');
+	const newTask = document.createElement('input');
+	const taskLabel = document.createElement('label');
+	const taskDescriptionNode = document.createTextNode(description);
 
-    let task = "<div><input type='checkbox' onchange='concluiTarefa(this);'>"+document.getElementById('task-input').value+"</div>";
+	newTask.setAttribute('type', 'checkbox');
+	newTask.setAttribute('name', description);
+	newTask.setAttribute('id', description);
 
-    taskList.innerHTML = taskListAtual + task;
+	taskLabel.setAttribute('for', description);
+	taskLabel.appendChild(taskDescriptionNode);
 
-    document.getElementById('task-input').value = "";
-});
+	taskContainer.classList.add('task-item');
+	taskContainer.appendChild(newTask);
+	taskContainer.appendChild(taskLabel);
 
-function concluiTarefa(taskCheckbox) {
-
-    console.log(taskCheckbox.outerHTML)
-
-    if(taskCheckbox.checked==true){
-        task[i].innerHTML = "<del>"+task[i].innerHTML+"</del>";
-
-        taskCheckbox.checked = true;
-    }else{
-        task[i].innerHTML.replace('<del>', '').replace('</del>', '');
-    }
-
+	taskList.appendChild(taskContainer);
 }
