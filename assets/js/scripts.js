@@ -1,29 +1,28 @@
-const form = document.getElementById('task-form');
-const taskList = document.getElementById('tasks');
+function operacaoNumeros(num1, num2) {
 
-form.onsubmit = function (e) {
-	e.preventDefault();
-	const inputField = document.getElementById('task-input');
-	addTask(inputField.value);
-	form.reset();
-};
+	let string = "";
 
-function addTask(description) {
-	const taskContainer = document.createElement('div');
-	const newTask = document.createElement('input');
-	const taskLabel = document.createElement('label');
-	const taskDescriptionNode = document.createTextNode(description);
+	if(num1 === num2){
+		string += "Os números "+num1+" e "+num2+" são iguais. ";
+	}else{
+		string += "Os números "+num1+" e "+num2+" são diferentes. ";
+	}
 
-	newTask.setAttribute('type', 'checkbox');
-	newTask.setAttribute('name', description);
-	newTask.setAttribute('id', description);
+	let soma = num1 + num2;
 
-	taskLabel.setAttribute('for', description);
-	taskLabel.appendChild(taskDescriptionNode);
+	if(soma > 10 && soma < 20){
+		string += "A soma dos números "+num1+" e "+num2+" é maior que 10 e menor que 20!";
+	}else if(soma > 10 && soma > 20) {
+		string += "A soma dos números "+num1+" e "+num2+" é maior que 10 e maior que 20!"
+	}else{
+		string += "A soma dos números "+num1+" e "+num2+" é menor que 10 e menor que 20!"
+	}
 
-	taskContainer.classList.add('task-item');
-	taskContainer.appendChild(newTask);
-	taskContainer.appendChild(taskLabel);
-
-	taskList.appendChild(taskContainer);
+	return string+"\r\n";
 }
+
+
+console.log(operacaoNumeros(10, 5));
+console.log(operacaoNumeros(8, 8));
+console.log(operacaoNumeros(1, 2));
+console.log(operacaoNumeros(20, 20));
