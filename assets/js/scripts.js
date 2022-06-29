@@ -1,33 +1,27 @@
-var currentNumberWrapper = document.getElementById("currentNumber");
+const TASKBUTTON = document.getElementById('add-task');
+let taskList = document.getElementById('tasks');
 
-document.getElementById("adicionar").addEventListener("click", function(){
+TASKBUTTON.addEventListener('click', function(){
 
-    let currentNumber = currentNumberWrapper.innerHTML;
+    taskListAtual = taskList.innerHTML;
 
-    currentNumber++;
+    let task = "<div><input type='checkbox' onchange='concluiTarefa(this);'>"+document.getElementById('task-input').value+"</div>";
 
-    mudarCorNumero(currentNumber);
+    taskList.innerHTML = taskListAtual + task;
 
-    currentNumberWrapper.innerHTML = currentNumber;
+    document.getElementById('task-input').value = "";
 });
 
-document.getElementById("subtrair").addEventListener("click", function(){
+function concluiTarefa(taskCheckbox) {
 
-    let currentNumber = currentNumberWrapper.innerHTML;
+    console.log(taskCheckbox.outerHTML)
 
-    currentNumber--;
+    if(taskCheckbox.checked==true){
+        task[i].innerHTML = "<del>"+task[i].innerHTML+"</del>";
 
-    mudarCorNumero(currentNumber);
-
-    currentNumberWrapper.innerHTML = currentNumber;
-});
-
-function mudarCorNumero(currentNumber){
-    if(currentNumber < 0){
-        currentNumberWrapper.style.color = "red";
-    }else if(currentNumber > 0){
-        currentNumberWrapper.style.color = "blue";
+        taskCheckbox.checked = true;
     }else{
-        currentNumberWrapper.style.color = "black";
+        task[i].innerHTML.replace('<del>', '').replace('</del>', '');
     }
+
 }
