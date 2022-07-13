@@ -1,5 +1,12 @@
 <h2>{{ textContent }}</h2>
 
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="description">Filter by:</label>
+    <div class="col-sm-12">
+        <input [(ngModel)]="filter" class="form-control" />
+    </div>
+</div>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -14,7 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let course of courses">
+        <tr *ngFor="let course of filteredCourses">
             <td><img [src]="course.imageUrl" width="15%" /></td>
             <td>{{course.name}}</td>
             <td>{{course.price}}</td>
