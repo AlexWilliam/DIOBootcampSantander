@@ -1,13 +1,13 @@
-<h1 class="text-success text-center" appMarcaTexto corDeFundo="blue" corDoTexto="red" >Live Diretivas DIO</h1>
+<!--h1 class="text-success text-center" appMarcaTexto corDeFundo="blue" corDoTexto="red" >Live Diretivas DIO</h1-->
 
 <!-- Diretivas de Atributo -->
-<div [ngStyle]="{background: count<5 ? 'red' : 'green' }" [ngClass]="{custom: count>=5}">
+<!--div [ngStyle]="{background: count<5 ? 'red' : 'green' }" [ngClass]="{custom: count>=5}">
     <h2>Contador: {{count}}</h2>
-</div>
+</div-->
 <!-- /Diretivas de Atributo -->
 
 <!-- Diretivas Estruturais -->
-<h2 *ngIf="count>7; else menor">O contador passou de 7!</h2>
+<!--h2 *ngIf="count>7; else menor">O contador passou de 7!</h2>
 <ng-template #menor>
     <h2>O contador não passou de 7!</h2>
 </ng-template>
@@ -22,20 +22,19 @@
 </ul>
 
 
-<ul class="list-group align-center mx-auto">
-    <li class="list-group-item" *ngFor="let pessoa of pessoas">O nome é {{pessoa.nome}} {{pessoa.sobrenome}}</li>
-</ul>
+
 
 <ul class="list-group align-center mx-auto">
     <ng-template ngFor let-pessoa [ngForOf]="pessoas">
-        <li class="list-group-item">O nome é {{pessoa.nome}} {{pessoa.sobrenome}}</li>
+        <li class="list-group-item">O nome da pessoa é {{pessoa.firstName}} {{pessoa.lastName}} e ela tem {{pessoa.age}} anos!</li>
     </ng-template>
-</ul>
+</ul-->
 
 <!-- /Diretivas Estruturais -->
 
-<div class="text-center mx-auto" appMarcaTexto corDeFundo="blue" corDoTexto="red" >
-    <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite alguma coisa" [(ngModel)]="text"/>
+<!--div class="text-center mx-auto" appMarcaTexto corDeFundo="blue" corDoTexto="red" >
+    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Digite alguma coisa" [(ngModel)]="text"/>
     <button class="btn btn-primary" (click)="clickou();">Salvar</button>
     <h4 >{{text}}</h4>
-</div>
+</div-->
+<h1 class="text-center mx-auto">Lista de Pokemons</h1>

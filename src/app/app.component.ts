@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PeopleService } from './shared/services/PeopleService/people.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
 
@@ -12,27 +13,8 @@ export class AppComponent implements OnInit {
     @Input()
     text: string = "";
 
-    pessoas = [
-        {
-            nome: "Alex",
-            sobrenome: "Gonçalves"
-        },
-        {
-            nome: "Alice",
-            sobrenome: "Dias"
-        },
-        {
-            nome: "Alana",
-            sobrenome: "Dias"
-        },
-        {
-            nome: "Mourrice",
-            sobrenome: "Cardoso"
-        }
-    ]
-
-    constructor(){ 
-
+    constructor(private _peopleService: PeopleService){ 
+        
     }
 
     ngOnInit(){

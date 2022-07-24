@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MarcaTextoDirective } from './directives/marca-texto.directive';
+import { ListPeopleComponent } from './shared/components/list-people/list-people/list-people.component';
+import { ListApiComponent } from './components/list-api/list-api/list-api.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarcaTextoDirective
+    MarcaTextoDirective,
+    ListPeopleComponent,
+    ListApiComponent
   ],
   imports: [
     BrowserModule,
