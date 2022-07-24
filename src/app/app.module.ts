@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { MarcaTextoDirective } from './directives/marca-texto.directive';
 import { ListPeopleComponent } from './shared/components/list-people/list-people/list-people.component';
 import { ListApiComponent } from './components/list-api/list-api/list-api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListApiComponent } from './components/list-api/list-api/list-api.compon
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

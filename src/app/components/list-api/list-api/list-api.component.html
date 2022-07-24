@@ -1,1 +1,11 @@
-<p>list-api works!</p>
+<section class="d-flex align-items-center justify-content-center flex-wrap">
+    <div class="card my-2 mx-2" style="width: 18rem;" *ngFor="let pokemon of pokemons">
+        <!--img class="card-img-top" src="{{pokemon.url}}" alt="Card image cap"-->
+        <div class="card-body">
+            <h3 class="card-title align-center">{{pokemon.name}}</h3>
+            <!--p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a-->
+        </div>
+    </div>
+</section>
+
