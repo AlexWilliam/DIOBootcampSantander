@@ -1,0 +1,41 @@
+<h1 class="text-success text-center" appMarcaTexto corDeFundo="blue" corDoTexto="red" >Live Diretivas DIO</h1>
+
+<!-- Diretivas de Atributo -->
+<div [ngStyle]="{background: count<5 ? 'red' : 'green' }" [ngClass]="{custom: count>=5}">
+    <h2>Contador: {{count}}</h2>
+</div>
+<!-- /Diretivas de Atributo -->
+
+<!-- Diretivas Estruturais -->
+<h2 *ngIf="count>7; else menor">O contador passou de 7!</h2>
+<ng-template #menor>
+    <h2>O contador não passou de 7!</h2>
+</ng-template>
+
+
+<ul class="list-group align-center mx-auto" [ngSwitch]="count">
+    <li class="list-group-item" *ngSwitchCase="3">1) É igual a três!</li>
+    <li class="list-group-item" *ngSwitchCase="5">2) É igual a cinco!</li>
+    <li class="list-group-item" *ngSwitchCase="7">3) É igual a sete!</li>
+    <li class="list-group-item" *ngSwitchCase="9">4) É igual a nove!</li>
+    <li class="list-group-item" *ngSwitchDefault="">0) Essa é a mensagem DEFAULT!</li>
+</ul>
+
+
+<ul class="list-group align-center mx-auto">
+    <li class="list-group-item" *ngFor="let pessoa of pessoas">O nome é {{pessoa.nome}} {{pessoa.sobrenome}}</li>
+</ul>
+
+<ul class="list-group align-center mx-auto">
+    <ng-template ngFor let-pessoa [ngForOf]="pessoas">
+        <li class="list-group-item">O nome é {{pessoa.nome}} {{pessoa.sobrenome}}</li>
+    </ng-template>
+</ul>
+
+<!-- /Diretivas Estruturais -->
+
+<div class="text-center mx-auto" appMarcaTexto corDeFundo="blue" corDoTexto="red" >
+    <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite alguma coisa" [(ngModel)]="text"/>
+    <button class="btn btn-primary" (click)="clickou();">Salvar</button>
+    <h4 >{{text}}</h4>
+</div>
