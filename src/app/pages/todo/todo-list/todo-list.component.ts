@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/models/todo';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+    todoTitle: string = "";
 
-  ngOnInit(): void {
-  }
+    todos: Array<Todo> = [];
+
+    constructor() { }
+
+    ngOnInit(): void {
+
+    }
+
+    addTodo(title: string): void {
+        this.todos.push();
+    }
 
 }
