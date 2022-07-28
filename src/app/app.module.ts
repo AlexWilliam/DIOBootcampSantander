@@ -20,6 +20,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
     declarations: [
@@ -31,6 +34,7 @@ import { MatButtonModule } from '@angular/material/button';
         ButtonComponent,
         LifeCycleComponent,
         TodoListComponent,
+        TodoItemComponent,
     ],
     imports: [
         BrowserModule,
@@ -43,7 +47,8 @@ import { MatButtonModule } from '@angular/material/button';
         MatCardModule,
         MatGridListModule,
         MatIconModule,
-        MatButtonModule
+        MatButtonModule,
+        MatListModule
     ],
     providers: [],
     bootstrap: [AppComponent],

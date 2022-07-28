@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/todo';
 
 @Component({
@@ -8,9 +8,12 @@ import { Todo } from 'src/app/models/todo';
 })
 export class TodoListComponent implements OnInit {
 
-    todoTitle: string = "";
-
     todos: Array<Todo> = [];
+    todo: Todo = {
+        id: 0,
+        title: '',
+        done: false
+    }
 
     constructor() { }
 
@@ -19,7 +22,18 @@ export class TodoListComponent implements OnInit {
     }
 
     addTodo(title: string): void {
-        this.todos.push();
+        this.todo = {
+            id: this.todos.length+1,
+            title: title,
+            done: false
+        }
+        this.todos.push(this.todo);
+        console.log(this.todos);
+    }
+
+    removeTodo(event: Todo): void {
+        let index = this.todos.indexOf(event);
+        this.todos.splice(index, 1);
     }
 
 }
